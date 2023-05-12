@@ -1,0 +1,21 @@
+---
+- name: Deploy Docker Images
+  hosts: all
+  tasks:
+    - name: Starting docker service
+      service:
+        name: docker
+        state: started
+
+    - name: Copy Docker Compose file from host machine to AWS EC2 Instance
+      copy:
+        src: ./docker-compose.yml
+        dest: ./
+
+    - name: Run the docker compose in detached mode
+      command: docker-compose up -d
+
+    - name: Prune the dangling Docker images
+      command: docker image prune --force
+
+

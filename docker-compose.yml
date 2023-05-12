@@ -1,0 +1,94 @@
+version: "3.9"
+
+services:
+  eureka:
+    image: yasha145/claritypluspackage:1.0
+    ports:
+      - "8761:8761"
+    networks:
+      - claritypluspackage
+
+  apigateway:
+    image: yasha145/claritypluspackage:2.0
+    ports:
+      - "9003:9003"
+    depends_on:
+      - eureka
+    networks:
+      - claritypluspackage
+  
+  mysql_recipient:
+    image: mysql:8
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_recipient_data:/var/lib/mysql
+    networks:
+      - claritypluspackage
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mysql_recipient
+    
+
+  recipient:
+    image: yasha145/claritypluspackage:3.0
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 5
+        window: 120s
+    ports:
+      - "9002:9002"
+    depends_on:
+      - apigateway
+      - mysql_recipient
+    networks:
+      - claritypluspackage
+
+  mysql_order:
+    image: mysql:8
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_order_data:/var/lib/mysql
+    networks:
+      - claritypluspackage
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mysql_order
+
+  order:
+    image: yasha145/claritypluspackage:4.0
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 5
+        window: 120s
+    ports:
+      - "9001:9001"
+    depends_on:
+      - apigateway
+      - mysql_recipient
+    networks:
+      - claritypluspackage
+
+  frontend:
+    image: yasha145/claritypluspackage:5.0
+    ports:
+      - "3000:3000"
+    depends_on:
+      - order
+    networks:
+      - claritypluspackage
+
+volumes:
+  mysql_recipient_data:
+    external: true
+  mysql_order_data:
+    external: true
+
+networks:
+  claritypluspackage:
+

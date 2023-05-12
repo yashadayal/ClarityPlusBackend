@@ -1,0 +1,32 @@
+server:
+  port: 9003
+
+#eureka:
+#  instance:
+#    hostname: eureka
+#  client:
+#    eureka-service-url:
+#      defaultZone: http://eureka:8761/eureka/
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: order-microservice
+          uri: lb://order-microservice
+          predicates:
+            - Path=/order/**
+        - id: recipient-microservice
+          uri: lb://recipient-microservice
+          predicates:
+            - Path=/recipient/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka:8761/eureka/

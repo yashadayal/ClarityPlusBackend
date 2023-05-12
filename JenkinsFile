@@ -1,0 +1,71 @@
+pipeline {
+    agent any
+    
+    stages {
+	stage('Git Frontend Cloning') {
+            steps {
+                git branch: 'master', url : 'https://github.com/Srivastava-Rani-Aakanksha/Clarity_Plus_Package-Frontend-.git'
+            }
+        }
+        stage('Git Backend Cloning') {
+            steps {
+                git 'https://github.com/yashadayal/ClarityPlusBackend.git'
+            }
+        }
+        stage('Build Microservices Code') {
+            steps {
+                script {
+                    def microservices = ['OrderMService', 'RecipientMService', 'apigateway', 'eurekaServer']
+                    for (folder in microservices) {
+                        dir(folder) {
+                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean package -DskipTests"
+                        }
+                    }
+                }
+            }
+        }
+	stage('Build and Push Frontend Image') {
+            steps {
+                dir('Clarity_Plus_Package-Frontend-') {
+                    sh 'docker build -t frontend:5.0 .'
+                }
+		withDockerRegistry([credentialsId: "Docker", url: ""]) {
+                    sh "docker push yasha145/claritypluspackage:5.0"
+                }
+            }
+        }
+        stage('Build and Push Backend Images') {
+            steps {
+                script {
+                    def dockerImageNames = ['eurekaserver', 'apigateway', 'recipient', 'order']
+                    def microservices = ['eurekaServer', 'apigateway', 'RecipientMService', 'OrderMService']
+                    def imageTag = '1.0'
+                    for (int i = 0; i < 4; i++) {
+                        def imageName = 'yasha145/claritypluspackage'
+                        dir(microservices[i])
+                        {
+                            echo "docker build -t ${dockerImageNames[i]}:${imageTag} ."
+                            sh "docker build -t ${dockerImageNames[i]}:${imageTag}  ."
+                            withDockerRegistry([credentialsId: "Docker", url: ""]) {
+                                sh "docker push ${imageName}:${imageTag}"
+                            }
+                        }
+                        imageTag = (imageTag.toDouble() + 1).toString()
+                    }
+                }
+            }
+        }
+
+        stage('Ansible Deploy') {
+		steps {
+			ansiblePlaybook becomeUser: 'null',
+			colorized: true,
+			installation: 'Ansible',
+			inventory: 'inventory',
+			playbook: 'ansible-playbook.yml',
+			sudoUser: 'null'
+		}
+	}
+    }
+}
+

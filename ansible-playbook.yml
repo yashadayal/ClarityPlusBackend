@@ -13,6 +13,7 @@
         dest: ./
 
     - name: Running docker compose
-       command: sudo docker-compose up
-
+      docker_compose:
+        project_src: ./
+        state: started
 

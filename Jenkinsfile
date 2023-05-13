@@ -50,14 +50,12 @@ pipeline {
                 }
             }
         }
-	stages {
-        stage('Run Ansible Playbook') {
-            steps {
-                sh 'ansible --version'
-                sh 'ansible-playbook --version'
-            }
-        }
-    }
+        stage('Run Ansible versions') {
+		    steps {
+		        sh 'ansible --version'
+		        sh 'ansible-playbook --version'
+		    }
+       	}
         stage('Ansible Deploy') {
 		steps {
 			ansiblePlaybook becomeUser: 'null',

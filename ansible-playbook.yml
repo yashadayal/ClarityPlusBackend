@@ -15,7 +15,4 @@
     - name: Run the docker compose in detached mode
       command: docker-compose up -d
 
-    - name: Prune the dangling Docker images
-      command: docker image prune --force
-
 

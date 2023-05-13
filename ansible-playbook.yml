@@ -2,14 +2,14 @@
 - name: Deploy Docker Images
   hosts: all
   vars:
-    ansible_python_interpreter: /usr/bin/python3
+    ansible_python_interpreter: /usr/bin/python3.6.9
   tasks:
     - name: Starting docker service
       service:
         name: docker
         state: started
 
-    - name: Copy Docker Compose file from host machine to AWS EC2 Instance
+    - name: Copy Docker Compose file from host machine
       copy:
         src: ./docker-compose.yml
         dest: ./

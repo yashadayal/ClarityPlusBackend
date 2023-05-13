@@ -14,6 +14,7 @@ import imgPath from "./Images/service-fast-delivery-parcels-vector-illustration-
 import Select from "@mui/material/Select";
 import Header from "./Header";
 import axios from "axios";
+import { Alert, Collapse } from "@mui/material";
 
 const UserFormPage = () => {
   const [firstName, setFirstName] = useState("");
@@ -25,6 +26,10 @@ const UserFormPage = () => {
   const [retailer, setRetailer] = useState("");
   const [isOtherSelected, setIsOtherSelected] = useState(false);
   const [otherRetailer, setOtherRetailer] = useState("");
+
+  const [nullValueError, setNullValueError] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [errormessage, setErrorMessage] = useState("");
 
   const handleRetailerChange = (e) => {
     const value = e.target.value;
@@ -38,13 +43,55 @@ const UserFormPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setNullValueError(false);
+
+    const emailCheck = /\S+@\S+\.\S+/;
+    if (!emailCheck.test(personalemailid)) {
+      setErrorMessage("Email is invalid");
+      setNullValueError(true);
+      return;
+    }
+
+    const AlphaCheck = /^[A-Za-z]+$/;
+    if (!AlphaCheck.test(firstName)) {
+      setErrorMessage("Enter valid First Name");
+      setNullValueError(true);
+      return;
+    }
+
+    const AlphaCheckln = /^[A-Za-z]*$/;
+    if (!AlphaCheckln.test(lastName)) {
+      setErrorMessage("Enter valid Last Name");
+      setNullValueError(true);
+      return;
+    }
+
+    const AlphaNumericCheck = /^[A-Za-z0-9]+$/;
+    if (!AlphaNumericCheck.test(orderId)) {
+      setErrorMessage("Enter valid OrderId");
+      setNullValueError(true);
+      return;
+    }
+
+    if (!AlphaNumericCheck.test(instituteId)) {
+      setErrorMessage("Enter valid Institute Id");
+      setNullValueError(true);
+      return;
+    }
+
+    if (phoneNumber.length !== 10) {
+      setErrorMessage("Mobile number is invalid !!!");
+      setNullValueError(true);
+      return;
+    }
+
     let data;
     if (retailer !== "Other") {
       data = {
         RecipientFirstName: firstName,
         RecipientLastName: lastName,
-        OrderID: orderId,
-        InstituteID: instituteId,
+        OrderID: orderId.toUpperCase(),
+        InstituteID: instituteId.toUpperCase(),
         RecipientPhoneNumber: phoneNumber,
         PersonalEmailID: personalemailid,
         Retailer: retailer,
@@ -54,7 +101,7 @@ const UserFormPage = () => {
         RecipientFirstName: firstName,
         RecipientLastName: lastName,
         OrderID: orderId,
-        InstituteID: instituteId,
+        InstituteID: instituteId.toUpperCase(),
         RecipientPhoneNumber: phoneNumber,
         PersonalEmailID: personalemailid,
         Retailer: otherRetailer,
@@ -110,6 +157,16 @@ const UserFormPage = () => {
               >
                 <Grid item xs={12} sm={6.1}>
                   <TextField
+                    onBlur={(e) => {
+                      const fn = /^[A-Za-z]+$/;
+                      setNullValueError(false);
+                      if (!fn.test(e.target.value)) {
+                        setErrorMessage("First Name is invalid");
+                        setNullValueError(true);
+                      }
+
+                      setFirstName(e.target.value);
+                    }}
                     variant="outlined"
                     required
                     fullWidth
@@ -121,6 +178,16 @@ const UserFormPage = () => {
                 </Grid>
                 <Grid item xs={12} sm={6.1}>
                   <TextField
+                    onBlur={(e) => {
+                      const ln = /^[A-Za-z]*$/;
+                      setNullValueError(false);
+                      if (!ln.test(e.target.value)) {
+                        setErrorMessage("Last Name is invalid");
+                        setNullValueError(true);
+                      }
+
+                      setLastName(e.target.value);
+                    }}
                     variant="outlined"
                     fullWidth
                     label="Last Name"
@@ -131,6 +198,16 @@ const UserFormPage = () => {
                 </Grid>
                 <Grid item xs={12} sm={6.1}>
                   <TextField
+                    onBlur={(e) => {
+                      const oi = /^[A-Za-z0-9]+$/;
+                      setNullValueError(false);
+                      if (!oi.test(e.target.value)) {
+                        setErrorMessage(" Order Id is invalid");
+                        setNullValueError(true);
+                      }
+
+                      setOrderId(e.target.value);
+                    }}
                     variant="outlined"
                     required
                     fullWidth
@@ -142,6 +219,16 @@ const UserFormPage = () => {
                 </Grid>
                 <Grid item xs={12} sm={6.1}>
                   <TextField
+                    onBlur={(e) => {
+                      const ii = /^[A-Za-z0-9]+$/;
+                      setNullValueError(false);
+                      if (!ii.test(e.target.value)) {
+                        setErrorMessage(" Institute Id is invalid");
+                        setNullValueError(true);
+                      }
+
+                      setInstituteId(e.target.value);
+                    }}
                     variant="outlined"
                     required
                     fullWidth
@@ -155,20 +242,53 @@ const UserFormPage = () => {
                   <TextField
                     variant="outlined"
                     required
+                    onChange={(e) => {
+                      const mn = /^[0-9\b]+$/;
+                      if (mn.test(e.target.value)) {
+                        setPhoneNumber(e.target.value);
+                        setNullValueError(false);
+                        if (e.target.value.length === 10) {
+                          setPhoneNumber(e.target.value);
+                        }
+                        if (e.target.value.length > 10) {
+                          setErrorMessage(
+                            "More than 10 digits in Mobile Number!!!"
+                          );
+                          setNullValueError(true);
+                        }
+                        if (e.target.value.length < 10) {
+                          setErrorMessage(
+                            "Less than 10 digits in Mobile Number!!!"
+                          );
+                          setNullValueError(true);
+                        }
+                      } else {
+                        setErrorMessage("Use Numbers only!!!");
+                        setNullValueError(true);
+                      }
+                    }}
                     fullWidth
-                    label="Phone Number"
-                    name="Phone Number"
+                    label="Mobile Number"
+                    name="Mobile Number"
                     value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    inputProps={{ maxLength: 10 }}
-                    InputProps={{ inputMode: "tel" }}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6.1}>
                   <TextField
+                    onBlur={(e) => {
+                      const re = /\S+@\S+\.\S+/;
+                      setNullValueError(false);
+                      if (!re.test(e.target.value)) {
+                        setErrorMessage("Email is invalid");
+                        setNullValueError(true);
+                      }
+
+                      setPersonalEmailId(e.target.value);
+                    }}
                     variant="outlined"
                     required
                     fullWidth
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     label="Personal Email Id"
                     name="Personal Email Id"
                     value={personalemailid}
@@ -208,7 +328,19 @@ const UserFormPage = () => {
                     />
                   </Grid>
                 )}
-
+                <Grid item xs={12} sm={6.1}>
+                  {nullValueError && (
+                <Box sx={{ width: "100%" }}>
+                  <Collapse in={open}>
+                    <Alert
+                      severity="error"
+                    >
+                      {errormessage}
+                    </Alert>
+                  </Collapse>
+                </Box>
+              )}
+                </Grid>
                 <Grid item xs={12} sm={6.1}>
                   <Button
                     type="submit"

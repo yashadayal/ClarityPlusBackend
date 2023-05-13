@@ -6,19 +6,25 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import imgPath from "./Images/unnamed.jpg"
 import {Button} from "@mui/material";
+import Avatar from '@mui/material/Avatar';
 
 const Header=()=> {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{backgroundColor:'#0d47a1'}}>
         <Toolbar >
-        <a href="https://www.iiitb.ac.in/" style={{ textDecoration: 'none',color: 'white'}}>
+        {/* <a href="https://www.iiitb.ac.in/" style={{ textDecoration: 'none',color: 'white'}}>
           <Typography variant="h4" component="div" sx={{ flexGrow: 1, textDecoration: 'none',
       '&:hover': {
         textDecoration: 'underline',}}}>
             Clarity Plus Package
           </Typography>
-          </a>
+          </a> */}
+          <Avatar sx={{ m: 1,bgcolor: 'white' ,marginTop:"20px" }}>
+            <Typography sx={{color: 'blue'}}>
+              R
+            </Typography>
+          </Avatar>
           <Button 
             variant="outlined"
             sx={{ 
@@ -27,7 +33,7 @@ const Header=()=> {
             textDecoration: 'underline',
             fontSize: '1.2rem',
             marginTop:"20px",
-            marginLeft: "1200px"}} href="/">
+            marginLeft: "1450px"}} href="/">
             Logout
           </Button>
           <img

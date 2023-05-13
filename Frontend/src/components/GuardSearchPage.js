@@ -52,6 +52,7 @@ function GuardSearchPage () {
     const [otp, setOtp] = useState('');
     const [verified, setVerified] = useState(false);
     const [openSuccess, setOpenSuccess] = useState(false);
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     useEffect(() => {
       console.log(verified);
@@ -115,6 +116,10 @@ function GuardSearchPage () {
       })
     };
 
+    const handleConditionChange = (condition) => {
+    setIsButtonDisabled(!condition); // Set the disabled status of the button based on the condition
+  }
+  console.log(recipientDetails[0]);
   return (
     <>
     <GuardDashboard/>
@@ -156,7 +161,20 @@ function GuardSearchPage () {
 
         </Table>
       </TableContainer>
-              <Button   
+      
+      { ( (recipientDetails.length===1 &&  (recipientDetails[0].includes("There") || recipientDetails[0].includes("This")) ) || recipientDetails.length===0  )?<Button   
+              variant="outline"
+              onClick={handleClickOpen}
+              disabled
+              sx={{
+                size:"small",
+                marginTop: "20px",
+                backgroundColor: "#e3f2fd",
+                mt: 1,
+                color: "#0d47a1",
+              }}>
+              Send OTP
+            </Button> : <Button   
               variant="outline"
               onClick={handleClickOpen}
               sx={{
@@ -167,7 +185,8 @@ function GuardSearchPage () {
                 color: "#0d47a1",
               }}>
               Send OTP
-            </Button>
+            </Button>}
+                      
         <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Authentication</DialogTitle>
         <DialogContent>

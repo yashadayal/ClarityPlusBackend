@@ -52,7 +52,7 @@ pipeline {
         }
         stage('Ansible Deploy') {
 		steps {
-			sh "ansible-playbook -i inventory ansible-playbook.yml"
+			 sh "ansible-playbook -i inventory ansible-playbook.yml -e \"ansible_become_password=gate2021\""
 
 		}
 	}

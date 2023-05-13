@@ -1,2 +1,2 @@
 [localhost]
-yasha ansible_connection=local ansible_become_pass=gate2021
+yasha ansible_connection=local

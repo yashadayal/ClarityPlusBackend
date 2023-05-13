@@ -16,4 +16,5 @@
 
     - name: run docker-compose file
       command: docker-compose up -d
+      become: true
 

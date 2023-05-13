@@ -13,6 +13,6 @@
         dest: ./
 
     - name: Run the docker compose in detached mode
-      command: docker-compose up -d
+      command: docker-compose up
 
 

@@ -1,8 +1,7 @@
 ---
 - name: Deploy Docker Images
   hosts: localhost
-  vars:
-    ansible_python_interpreter: /usr/bin/python3
+  
   tasks:
     - name: Starting docker service
       service:
@@ -18,4 +17,7 @@
       docker_compose:
         project_src: ./
         state: present
+      become: true
+      vars:
+    	ansible_python_interpreter: /usr/bin/python3
 

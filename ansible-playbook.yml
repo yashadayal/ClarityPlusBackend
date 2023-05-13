@@ -17,4 +17,6 @@
     - name: run docker-compose file
       command: docker-compose up -d
       become: true
+      become_user: yasha
+      become_password: gate2021
 

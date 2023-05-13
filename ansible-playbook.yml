@@ -14,8 +14,6 @@
         src: ./docker-compose.yml
         dest: ./
 
-    - name: Running docker compose
-      docker_compose:
-        project_src: ./
-        state: present
+    - name: run docker-compose file
+      command: docker-compose up -d
 

@@ -1,6 +1,9 @@
 ---
 - name: Deploy Docker Images
   hosts: localhost
+  become: true
+  become_user: yasha
+  become_password: gate2021
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
@@ -16,7 +19,4 @@
 
     - name: run docker-compose file
       command: docker-compose up -d
-      become: true
-      become_user: yasha
-      become_password: gate2021
 

@@ -50,20 +50,9 @@ pipeline {
                 }
             }
         }
-        stage('Run Ansible versions') {
-		    steps {
-		        sh 'ansible --version'
-		        sh 'ansible-playbook --version'
-		    }
-       	}
         stage('Ansible Deploy') {
 		steps {
-			ansiblePlaybook becomeUser: 'null',
-			colorized: true,
-			installation: 'Ansible',
-			inventory: 'inventory',
-			playbook: 'ansible-playbook.yml',
-			sudoUser: 'null'
+			sh "ansible-playbook -i inventory playbook.yml --ask-become-pass"
 		}
 	}
     }

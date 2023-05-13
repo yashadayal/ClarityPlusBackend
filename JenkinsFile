@@ -2,14 +2,9 @@ pipeline {
     agent any
     
     stages {
-	stage('Git Frontend Cloning') {
+        stage('Git Cloning') {
             steps {
-                git branch: 'master', url : 'https://github.com/Srivastava-Rani-Aakanksha/Clarity_Plus_Package-Frontend-.git'
-            }
-        }
-        stage('Git Backend Cloning') {
-            steps {
-                git 'https://github.com/yashadayal/ClarityPlusBackend.git'
+                git 'https://github.com/yashadayal/ClarityPlusPackage.git'
             }
         }
         stage('Build Microservices Code') {
@@ -26,7 +21,7 @@ pipeline {
         }
 	stage('Build and Push Frontend Image') {
             steps {
-                dir('Clarity_Plus_Package-Frontend-') {
+                dir('Frontend') {
                     sh 'docker build -t frontend:5.0 .'
                 }
 		withDockerRegistry([credentialsId: "Docker", url: ""]) {

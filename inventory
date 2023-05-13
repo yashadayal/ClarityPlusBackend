@@ -1,1 +1,1 @@
-44.203.93.177 ansible_ssh_private_key_file=/home/yasha/Downloads/project-key.pem ansible_user=ubuntu ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+54.89.174.154 ansible_ssh_private_key_file=/home/yasha/Downloads/project-key.pem ansible_user=ubuntu ansible_ssh_extra_args='-o StrictHostKeyChecking=no'

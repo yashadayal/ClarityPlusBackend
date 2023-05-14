@@ -4,6 +4,9 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
+    - name: Check using whoami
+      shell: whoami
+
     - name: Starting docker service
       service:
         name: docker

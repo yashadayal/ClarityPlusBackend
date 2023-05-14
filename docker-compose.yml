@@ -44,10 +44,6 @@ services:
       - claritypluspackage
     logging:
       driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "1"
-        compress: "true"
 
   mysql_order:
     image: mysql:8
@@ -76,10 +72,6 @@ services:
       - claritypluspackage
     logging:
       driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "1"
-        compress: "true"
 
   frontend:
     image: yasha145/claritypluspackage:5.0

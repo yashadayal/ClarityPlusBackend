@@ -14,7 +14,7 @@ public class EmailConfig {
 
     public void sendOTPMail(String to, String subject, String body)  {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("claritypluspackage@gmail.com");
+        message.setFrom("claritypluspackages@gmail.com");
         message.setTo(to);
         message.setSubject(subject);
         message.setText(body);

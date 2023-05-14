@@ -15,7 +15,6 @@ import MenuItem from "@mui/material/MenuItem";
 import imgPath from "./Images/service-fast-delivery-parcels-vector-illustration-express-delivery-courier-service-smiling-man-courier-orange-uniform-with-box-his-hands-flat-style-eps-10_669518-23.avif";
 import imgPath1 from "./Images/unnamed.jpg"
 import Select from "@mui/material/Select";
-import Header from "./Header";
 import axios from "axios";
 import { Alert, Collapse } from "@mui/material";
 
@@ -133,7 +132,6 @@ const UserFormPage = () => {
 
   return (
     <>
-      {/* <Header /> */}
        <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" sx={{backgroundColor:'#0d47a1'}}>
           <Toolbar >

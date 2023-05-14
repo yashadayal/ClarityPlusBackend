@@ -12,5 +12,5 @@
     - name: Copy Docker Compose file from host machine
       copy:
         src: ./docker-compose.yml
-        dest: ./
+        dest: /home/yasha/docker-compose.yml
 

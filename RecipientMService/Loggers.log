@@ -1,0 +1,53 @@
+2023-May-14 17:40:41 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9002
+2023-May-14 17:40:41 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.255.163:recipient-microservice:9002 - registration status: 204
+2023-May-14 17:40:41 [main] INFO  c.C.R.RecipientMServiceApplication                 - Started RecipientMServiceApplication in 13.261 seconds (process running for 19.535)
+2023-May-14 17:40:46 [main] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Recipient Details Registered!
+2023-May-14 17:49:22 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Checking login details
+2023-May-14 17:49:22 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Valid Login
+2023-May-14 17:49:22 [http-nio-9002-exec-7] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
+2023-May-14 17:50:40 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-14 17:51:20 [http-nio-9002-exec-9] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-May-14 17:51:20 [http-nio-9002-exec-9] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-May-14 17:52:15 [http-nio-9002-exec-10] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-May-14 17:52:15 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-May-14 17:54:12 [http-nio-9002-exec-3] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-May-14 17:54:12 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-May-14 17:54:13 [http-nio-9002-exec-4] INFO  c.C.R.C.RecipientDetailsController                 - Getting emailID to send OTP
+2023-May-14 17:54:21 [http-nio-9002-exec-4] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Generating message to be sent on email address
+2023-May-14 17:54:21 [http-nio-9002-exec-4] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP sent to email address
+2023-May-14 17:54:43 [http-nio-9002-exec-5] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-May-14 17:54:43 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-May-14 17:54:43 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verified
+2023-May-14 17:54:49 [http-nio-9002-exec-6] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-May-14 17:54:49 [http-nio-9002-exec-6] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-May-14 17:43:27 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9001
+2023-May-14 17:43:27 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.255.163:order-microservice:9001 - registration status: 204
+2023-May-14 17:43:28 [main] INFO  c.C.O.OrderMServiceApplication                     - Started OrderMServiceApplication in 15.501 seconds (process running for 21.48)
+2023-May-14 17:43:33 [main] INFO  c.C.O.I.OrderImplementation                        - Guard Details Registered!
+2023-May-14 17:45:19 [http-nio-9001-exec-2] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-May-14 17:45:19 [http-nio-9001-exec-2] INFO  c.C.O.C.OrderController                            - Login Guard checking
+2023-May-14 17:45:40 [http-nio-9001-exec-3] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-May-14 17:45:40 [http-nio-9001-exec-3] INFO  c.C.O.C.OrderController                            - Saving Orders received in campus
+2023-May-14 17:45:55 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Fetching logs by institute ID from order MS to recipient MS
+2023-May-14 17:46:03 [http-nio-9001-exec-5] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
+2023-May-14 17:46:03 [http-nio-9001-exec-5] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
+2023-May-14 17:46:33 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-May-14 17:46:33 [http-nio-9001-exec-1] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-May-14 17:46:33 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+
+2023-May-14 17:51:47 [http-nio-9001-exec-8] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-May-14 17:51:47 [http-nio-9001-exec-8] INFO  c.C.O.C.OrderController                            - Login Guard checking
+2023-May-14 17:52:01 [http-nio-9001-exec-9] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-May-14 17:52:01 [http-nio-9001-exec-9] INFO  c.C.O.C.OrderController                            - Saving Orders received in campus
+2023-May-14 17:52:15 [http-nio-9001-exec-10] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-May-14 17:52:15 [http-nio-9001-exec-10] INFO  c.C.O.I.OrderImplementation                        - No pending orders
+2023-May-14 17:52:15 [http-nio-9001-exec-10] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-May-14 17:54:12 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-May-14 17:54:12 [http-nio-9001-exec-4] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-May-14 17:54:12 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-May-14 17:54:21 [http-nio-9001-exec-5] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
+2023-May-14 17:54:43 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-May-14 17:54:49 [http-nio-9001-exec-6] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-May-14 17:54:49 [http-nio-9001-exec-6] INFO  c.C.O.I.OrderImplementation                        - No pending orders
+2023-May-14 17:54:49 [http-nio-9001-exec-6] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+

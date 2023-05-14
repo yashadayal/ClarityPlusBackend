@@ -1,9 +1,9 @@
 server:
   port: 9003
 
-#eureka:
-#  instance:
-#    hostname: eureka
+eureka:
+  instance:
+    hostname: localhost
 #  client:
 #    eureka-service-url:
 #      defaultZone: http://eureka:8761/eureka/
@@ -22,11 +22,11 @@ spring:
           uri: lb://recipient-microservice
           predicates:
             - Path=/recipient/**
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://eureka:8761/eureka/
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://eureka:8761/eureka/

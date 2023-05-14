@@ -6,11 +6,14 @@ import {
   Grid,
   Paper,
   Typography,
+  AppBar,
+  Toolbar,
   FormControl,
 } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import imgPath from "./Images/service-fast-delivery-parcels-vector-illustration-express-delivery-courier-service-smiling-man-courier-orange-uniform-with-box-his-hands-flat-style-eps-10_669518-23.avif";
+import imgPath1 from "./Images/unnamed.jpg"
 import Select from "@mui/material/Select";
 import Header from "./Header";
 import axios from "axios";
@@ -130,9 +133,39 @@ const UserFormPage = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+       <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" sx={{backgroundColor:'#0d47a1'}}>
+          <Toolbar >
+          {/* <a href="https://www.iiitb.ac.in/" style={{ textDecoration: 'none',color: 'white'}}> */}
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1, textDecoration: 'none',
+        '&:hover': {
+          textDecoration: 'underline',}}}>
+              Clarity Plus Package
+            </Typography>
+            <Button 
+              variant="outlined"
+              sx={{ 
+              fontWeight: 700,
+              color: 'white',
+              textDecoration: 'underline',
+              fontSize: '1.2rem',
+              marginTop:{ xs: '20px', sm: '20px' },
+              marginLeft: { xs: '1200px', sm: '20px' }}} href="/">
+              Logout
+            </Button>
+            <img
+              src= {imgPath1}
+              style={{ width: 160, height: 90, marginLeft: 'auto' }}
+            />
+          </Toolbar>
+        </AppBar>
+      </Box>
+     
+
+     
       <Grid container spacing={2}>
-        <Grid item xs={8}>
+        <Grid item xs={8} >
             <Typography
               variant="h5"
               sx={{

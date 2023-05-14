@@ -7,7 +7,7 @@ const GuardLandingPage =() =>
     return(
         <>
         <GuardDashboard/>
-        <img src={imgPath} style={{ display: "block", margin: "auto", width: "100%", textAlign: "center", verticalAlign: "middle"}} />
+        <img src={imgPath} style={{ display: "block", margin: "auto",width:"100%", textAlign: "center", verticalAlign: "middle"}} />
 
         </>
     )

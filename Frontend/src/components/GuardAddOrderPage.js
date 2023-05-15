@@ -241,19 +241,6 @@ function GuardAddOrderPage() {
             </Button>
             
           </Table>
-          {/* <Grid item xs={12} sm={6.1}>
-                  {nullValueError && (
-                <Box sx={{ width: "100%" }}>
-                  <Collapse in={open}>
-                    <Alert
-                      severity="error"
-                    >
-                      {errormessage}
-                    </Alert>
-                  </Collapse>
-                </Box>
-              )}
-                </Grid> */}
           <Button
               onClick={handleSubmit}
               fullWidth

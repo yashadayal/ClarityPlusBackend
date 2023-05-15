@@ -1,53 +1,319 @@
-2023-May-14 17:40:41 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9002
-2023-May-14 17:40:41 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.255.163:recipient-microservice:9002 - registration status: 204
-2023-May-14 17:40:41 [main] INFO  c.C.R.RecipientMServiceApplication                 - Started RecipientMServiceApplication in 13.261 seconds (process running for 19.535)
-2023-May-14 17:40:46 [main] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Recipient Details Registered!
-2023-May-14 17:49:22 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Checking login details
-2023-May-14 17:49:22 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Valid Login
-2023-May-14 17:49:22 [http-nio-9002-exec-7] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
-2023-May-14 17:50:40 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
-2023-May-14 17:51:20 [http-nio-9002-exec-9] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
-2023-May-14 17:51:20 [http-nio-9002-exec-9] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
-2023-May-14 17:52:15 [http-nio-9002-exec-10] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
-2023-May-14 17:52:15 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
-2023-May-14 17:54:12 [http-nio-9002-exec-3] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
-2023-May-14 17:54:12 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
-2023-May-14 17:54:13 [http-nio-9002-exec-4] INFO  c.C.R.C.RecipientDetailsController                 - Getting emailID to send OTP
-2023-May-14 17:54:21 [http-nio-9002-exec-4] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Generating message to be sent on email address
-2023-May-14 17:54:21 [http-nio-9002-exec-4] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP sent to email address
-2023-May-14 17:54:43 [http-nio-9002-exec-5] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
-2023-May-14 17:54:43 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
-2023-May-14 17:54:43 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verified
-2023-May-14 17:54:49 [http-nio-9002-exec-6] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
-2023-May-14 17:54:49 [http-nio-9002-exec-6] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
-2023-May-14 17:43:27 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9001
-2023-May-14 17:43:27 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.255.163:order-microservice:9001 - registration status: 204
-2023-May-14 17:43:28 [main] INFO  c.C.O.OrderMServiceApplication                     - Started OrderMServiceApplication in 15.501 seconds (process running for 21.48)
-2023-May-14 17:43:33 [main] INFO  c.C.O.I.OrderImplementation                        - Guard Details Registered!
-2023-May-14 17:45:19 [http-nio-9001-exec-2] INFO  c.C.O.I.OrderImplementation                        - Valid Login
-2023-May-14 17:45:19 [http-nio-9001-exec-2] INFO  c.C.O.C.OrderController                            - Login Guard checking
-2023-May-14 17:45:40 [http-nio-9001-exec-3] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
-2023-May-14 17:45:40 [http-nio-9001-exec-3] INFO  c.C.O.C.OrderController                            - Saving Orders received in campus
-2023-May-14 17:45:55 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Fetching logs by institute ID from order MS to recipient MS
-2023-May-14 17:46:03 [http-nio-9001-exec-5] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
-2023-May-14 17:46:03 [http-nio-9001-exec-5] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
-2023-May-14 17:46:33 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
-2023-May-14 17:46:33 [http-nio-9001-exec-1] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
-2023-May-14 17:46:33 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
-
-2023-May-14 17:51:47 [http-nio-9001-exec-8] INFO  c.C.O.I.OrderImplementation                        - Valid Login
-2023-May-14 17:51:47 [http-nio-9001-exec-8] INFO  c.C.O.C.OrderController                            - Login Guard checking
-2023-May-14 17:52:01 [http-nio-9001-exec-9] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
-2023-May-14 17:52:01 [http-nio-9001-exec-9] INFO  c.C.O.C.OrderController                            - Saving Orders received in campus
-2023-May-14 17:52:15 [http-nio-9001-exec-10] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
-2023-May-14 17:52:15 [http-nio-9001-exec-10] INFO  c.C.O.I.OrderImplementation                        - No pending orders
-2023-May-14 17:52:15 [http-nio-9001-exec-10] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
-2023-May-14 17:54:12 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
-2023-May-14 17:54:12 [http-nio-9001-exec-4] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
-2023-May-14 17:54:12 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
-2023-May-14 17:54:21 [http-nio-9001-exec-5] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
-2023-May-14 17:54:43 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
-2023-May-14 17:54:49 [http-nio-9001-exec-6] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
-2023-May-14 17:54:49 [http-nio-9001-exec-6] INFO  c.C.O.I.OrderImplementation                        - No pending orders
-2023-May-14 17:54:49 [http-nio-9001-exec-6] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
-
+2023-05-14T22:01:19,984 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Checking login details
+2023-05-14T22:01:19,989 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Valid Login
+2023-05-14T22:01:19,989 [http-nio-9002-exec-1] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
+2023-05-14T22:03:19,091 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver    - Resolving eureka endpoints via 
+2023-05-14T22:03:39,290 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-05-14T22:03:39,290 [http-nio-9002-exec-3] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-05-14T22:04:12,412 [http-nio-9002-exec-4] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-05-14T22:04:12,413 [http-nio-9002-exec-4] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-05-14T22:05:42,027 [http-nio-9002-exec-6] INFO  c.C.R.C.RecipientDetailsController                 - Getting all logs by Institute Id
+2023-05-14T22:05:42,066 [http-nio-9002-exec-6] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Searching logs by InstituteID
+2023-05-14T22:06:00,784 [http-nio-9002-exec-7] INFO  c.C.R.C.RecipientDetailsController                 - Getting all logs by Institute Id
+2023-05-14T22:06:00,795 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Searching logs by InstituteID
+2023-05-14T22:06:12,849 [http-nio-9002-exec-10] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:06:12,896 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of 
+2023-05-14T22:06:17,296 [http-nio-9002-exec-8] INFO  c.C.R.C.RecipientDetailsController                 - Getting emailID to send OTP
+2023-05-14T22:06:25,275 [http-nio-9002-exec-8] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Generating message to be sent on 
+2023-05-14T22:06:25,276 [http-nio-9002-exec-8] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP sent to email address
+2023-05-14T22:07:28,220 [http-nio-9002-exec-1] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:07:28,231 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:07:28,678 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verified
+2023-05-14T22:07:34,985 [http-nio-9002-exec-2] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:07:35,088 [http-nio-9002-exec-2] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of 
+2023-05-14T22:27:15,635 [main] INFO  c.C.R.RecipientMServiceApplication                 - Starting RecipientMServiceApplication using Java 17.0.6 with PID 7362 (/home/yasha/Desktop/SPE/RecipientMService/target/classes started by yasha in /home/yasha/Desktop/SPE/RecipientMService)
+2023-05-14T22:27:15,667 [main] INFO  c.C.R.RecipientMServiceApplication                 - No active profile set, falling back to 1 default profile: "default"
+2023-05-14T22:27:17,378 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-14T22:27:17,738 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 336 ms. Found 2 JPA repository interfaces.
+2023-05-14T22:27:18,006 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=7a8b6d3d-538a-3c64-9af5-792eb540e898
+2023-05-14T22:27:18,726 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2023-05-14T22:27:18,741 [main] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-9002"]
+2023-05-14T22:27:18,742 [main] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2023-05-14T22:27:18,743 [main] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-14T22:27:18,986 [main] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2023-05-14T22:27:18,988 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 3213 ms
+2023-05-14T22:27:19,343 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-14T22:27:19,512 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-14T22:27:20,349 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-14T22:27:21,861 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2838eb
+2023-05-14T22:27:21,863 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-14T22:27:21,884 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-14T22:27:21,887 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-14T22:27:24,097 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-14T22:27:24,120 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-14T22:27:24,990 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-14T22:27:25,883 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-14T22:27:26,085 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-14T22:27:26,209 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-14T22:27:26,318 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-14T22:27:26,346 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:27:26,374 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-14T22:27:26,374 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-14T22:27:26,374 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-14T22:27:26,374 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-14T22:27:26,374 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-14T22:27:26,374 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-14T22:27:26,375 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-14T22:27:27,095 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-14T22:27:27,099 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-14T22:27:27,102 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-14T22:27:27,107 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684083447106 with initial instances count: 2
+2023-05-14T22:27:27,110 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application RECIPIENT-MICROSERVICE with eureka with status UP
+2023-05-14T22:27:27,111 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684083447110, current=UP, previous=STARTING]
+2023-05-14T22:27:27,112 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002: registering service...
+2023-05-14T22:27:27,113 [main] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-9002"]
+2023-05-14T22:27:27,141 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2023-05-14T22:27:27,142 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9002
+2023-05-14T22:27:27,155 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002 - registration status: 204
+2023-05-14T22:27:27,201 [main] INFO  c.C.R.RecipientMServiceApplication                 - Started RecipientMServiceApplication in 12.576 seconds (process running for 22.318)
+2023-05-14T22:27:32,404 [main] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Recipient Details Registered!
+2023-05-14T22:31:22,185 [http-nio-9002-exec-1] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-14T22:31:22,251 [http-nio-9002-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2023-05-14T22:31:22,254 [http-nio-9002-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 1 ms
+2023-05-14T22:31:22,391 [http-nio-9002-exec-1] INFO  c.C.R.C.RecipientDetailsController                 - Getting all logs by Institute Id
+2023-05-14T22:31:22,738 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Searching logs by InstituteID
+2023-05-14T22:31:45,840 [http-nio-9002-exec-2] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Checking login details
+2023-05-14T22:31:45,845 [http-nio-9002-exec-2] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Valid Login
+2023-05-14T22:31:45,845 [http-nio-9002-exec-2] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
+2023-05-14T22:32:26,377 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:33:00,174 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-05-14T22:33:00,174 [http-nio-9002-exec-5] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-05-14T22:33:27,680 [http-nio-9002-exec-6] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-05-14T22:33:27,681 [http-nio-9002-exec-6] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-05-14T22:34:15,241 [http-nio-9002-exec-7] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:34:15,568 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:34:17,431 [http-nio-9002-exec-8] INFO  c.C.R.C.RecipientDetailsController                 - Getting emailID to send OTP
+2023-05-14T22:34:26,199 [http-nio-9002-exec-8] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Generating message to be sent on email address
+2023-05-14T22:34:26,199 [http-nio-9002-exec-8] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP sent to email address
+2023-05-14T22:34:54,187 [http-nio-9002-exec-9] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:34:54,190 [http-nio-9002-exec-9] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:34:54,190 [http-nio-9002-exec-9] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP not Verified
+2023-05-14T22:35:00,708 [http-nio-9002-exec-1] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:35:00,719 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:35:01,689 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verified
+2023-05-14T22:35:06,446 [http-nio-9002-exec-2] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:35:06,455 [http-nio-9002-exec-2] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:35:19,358 [http-nio-9002-exec-4] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:35:19,362 [http-nio-9002-exec-4] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:35:20,988 [http-nio-9002-exec-3] INFO  c.C.R.C.RecipientDetailsController                 - Getting emailID to send OTP
+2023-05-14T22:35:27,005 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Generating message to be sent on email address
+2023-05-14T22:35:27,006 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP sent to email address
+2023-05-14T22:36:05,647 [http-nio-9002-exec-5] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:36:05,655 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:36:05,888 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verified
+2023-05-14T22:36:08,845 [http-nio-9002-exec-6] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:36:08,847 [http-nio-9002-exec-6] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:37:19,000 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application RECIPIENT-MICROSERVICE with eureka with status DOWN
+2023-05-14T22:37:19,001 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684084039001, current=DOWN, previous=UP]
+2023-05-14T22:37:19,001 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002: registering service...
+2023-05-14T22:37:19,007 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002 - registration status: 204
+2023-05-14T22:37:19,014 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-14T22:37:19,016 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-14T22:37:19,020 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-14T22:37:19,021 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-14T22:37:22,023 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-14T22:37:22,032 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002 - deregister  status: 200
+2023-05-14T22:37:22,043 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient
+2023-05-14T21:57:59,506 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 683 ms. Found 2 JPA repository interfaces.
+2023-05-14T21:58:00,536 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=7a8b6d3d-538a-3c64-9af5-792eb540e898
+2023-05-14T21:58:02,130 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2023-05-14T21:58:02,141 [main] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-9002"]
+2023-05-14T21:58:02,142 [main] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2023-05-14T21:58:02,143 [main] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-14T21:58:03,767 [main] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2023-05-14T21:58:03,768 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 7513 ms
+2023-05-14T21:58:06,407 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-14T21:58:06,869 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-14T21:58:10,430 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-14T21:58:13,601 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12548f9a
+2023-05-14T21:58:13,604 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-14T21:58:13,667 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-14T21:58:13,693 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-14T21:58:15,947 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-14T21:58:15,984 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-14T21:58:17,187 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-14T21:58:18,284 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-14T21:58:18,604 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-14T21:58:18,787 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-14T21:58:18,979 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-14T21:58:19,004 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T21:58:19,062 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-14T21:58:19,063 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-14T21:58:19,063 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-14T21:58:19,063 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-14T21:58:19,063 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-14T21:58:19,063 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-14T21:58:19,063 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-14T21:58:20,222 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-14T21:58:20,229 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-14T21:58:20,236 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-14T21:58:20,313 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684081700246 with initial instances count: 2
+2023-05-14T21:58:20,322 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application RECIPIENT-MICROSERVICE with eureka with status UP
+2023-05-14T21:58:20,324 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684081700324, current=UP, previous=STARTING]
+2023-05-14T21:58:20,326 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002: registering service...
+2023-05-14T21:58:20,328 [main] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-9002"]
+2023-05-14T21:58:20,463 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002 - registration status: 204
+2023-05-14T21:58:20,504 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2023-05-14T21:58:20,507 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9002
+2023-05-14T21:58:20,525 [main] INFO  c.C.R.RecipientMServiceApplication                 - Started RecipientMServiceApplication in 25.751 seconds (process running for 28.876)
+2023-05-14T21:58:26,151 [main] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Recipient Details Registered!
+2023-05-14T22:01:19,153 [http-nio-9002-exec-1] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-14T22:01:19,182 [http-nio-9002-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2023-05-14T22:01:19,184 [http-nio-9002-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 1 ms
+2023-05-14T22:01:19,984 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Checking login details
+2023-05-14T22:01:19,989 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Valid Login
+2023-05-14T22:01:19,989 [http-nio-9002-exec-1] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
+2023-05-14T22:03:19,091 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:03:39,290 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-05-14T22:03:39,290 [http-nio-9002-exec-3] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-05-14T22:04:12,412 [http-nio-9002-exec-4] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-05-14T22:04:12,413 [http-nio-9002-exec-4] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-05-14T22:05:42,027 [http-nio-9002-exec-6] INFO  c.C.R.C.RecipientDetailsController                 - Getting all logs by Institute Id
+2023-05-14T22:05:42,066 [http-nio-9002-exec-6] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Searching logs by InstituteID
+2023-05-14T22:06:00,784 [http-nio-9002-exec-7] INFO  c.C.R.C.RecipientDetailsController                 - Getting all logs by Institute Id
+2023-05-14T22:06:00,795 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Searching logs by InstituteID
+2023-05-14T22:06:12,849 [http-nio-9002-exec-10] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:06:12,896 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:06:17,296 [http-nio-9002-exec-8] INFO  c.C.R.C.RecipientDetailsController                 - Getting emailID to send OTP
+2023-05-14T22:06:25,275 [http-nio-9002-exec-8] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Generating message to be sent on email address
+2023-05-14T22:06:25,276 [http-nio-9002-exec-8] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP sent to email address
+2023-05-14T22:07:28,220 [http-nio-9002-exec-1] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:07:28,231 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:07:28,678 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verified
+2023-05-14T22:07:34,985 [http-nio-9002-exec-2] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:07:35,088 [http-nio-9002-exec-2] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:07:44,673 [http-nio-9002-exec-3] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:07:44,679 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:08:19,093 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:09:17,576 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Checking login details
+2023-05-14T22:09:17,579 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Valid Login
+2023-05-14T22:09:17,580 [http-nio-9002-exec-5] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
+2023-05-14T22:09:42,938 [http-nio-9002-exec-6] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Saving Recipient Details
+2023-05-14T22:09:42,939 [http-nio-9002-exec-6] INFO  c.C.R.C.RecipientDetailsController                 - Saving user data
+2023-05-14T22:10:14,261 [http-nio-9002-exec-7] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:10:14,267 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:10:16,064 [http-nio-9002-exec-10] INFO  c.C.R.C.RecipientDetailsController                 - Getting emailID to send OTP
+2023-05-14T22:10:22,450 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Generating message to be sent on email address
+2023-05-14T22:10:22,451 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP sent to email address
+2023-05-14T22:10:49,433 [http-nio-9002-exec-9] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:10:49,439 [http-nio-9002-exec-9] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:10:49,439 [http-nio-9002-exec-9] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP not Verified
+2023-05-14T22:10:57,580 [http-nio-9002-exec-1] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:10:57,582 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:10:57,583 [http-nio-9002-exec-1] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP not Verified
+2023-05-14T22:11:57,924 [http-nio-9002-exec-3] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:11:57,926 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:11:57,926 [http-nio-9002-exec-3] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP not Verified
+2023-05-14T22:13:19,093 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:14:07,307 [http-nio-9002-exec-5] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:14:07,312 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:14:07,312 [http-nio-9002-exec-5] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP not Verified
+2023-05-14T22:17:10,999 [http-nio-9002-exec-7] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:17:11,472 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:17:11,472 [http-nio-9002-exec-7] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP not Verified
+2023-05-14T22:17:28,596 [http-nio-9002-exec-10] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-14T22:17:28,605 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verification Process
+2023-05-14T22:17:28,900 [http-nio-9002-exec-10] INFO  c.C.R.S.I.RecipientDetailsImpl                     - OTP Verified
+2023-05-14T22:17:33,504 [http-nio-9002-exec-8] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-14T22:17:33,511 [http-nio-9002-exec-8] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-14T22:17:52,989 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application RECIPIENT-MICROSERVICE with eureka with status DOWN
+2023-05-14T22:17:52,990 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684082872990, current=DOWN, previous=UP]
+2023-05-14T22:17:52,990 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002: registering service...
+2023-05-14T22:17:53,007 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002 - registration status: 204
+2023-05-14T22:17:53,148 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-14T22:17:53,173 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-14T22:17:53,177 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-14T22:17:53,178 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-14T22:17:56,180 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-14T22:17:56,301 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.43.151:recipient-microservice:9002 - deregister  status: 200
+2023-05-14T22:17:56,309 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient
+2023-05-14T22:25:18,143 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 564 ms. Found 2 JPA repository interfaces.
+2023-05-14T22:25:18,810 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=055c27df-bf98-3701-b1e6-7f85f2421d48
+2023-05-14T22:25:20,111 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2023-05-14T22:25:20,124 [main] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-9001"]
+2023-05-14T22:25:20,126 [main] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2023-05-14T22:25:20,127 [main] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-14T22:25:20,817 [main] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2023-05-14T22:25:20,819 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 7884 ms
+2023-05-14T22:25:22,019 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-14T22:25:22,400 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-14T22:25:23,944 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-14T22:25:27,086 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ec37a42
+2023-05-14T22:25:27,089 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-14T22:25:27,576 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-14T22:25:27,653 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-14T22:25:29,677 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-14T22:25:29,695 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-14T22:25:30,819 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-14T22:25:33,232 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-14T22:25:33,721 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-14T22:25:33,744 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver                  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-14T22:25:34,039 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-14T22:25:34,394 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-14T22:25:34,427 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:25:34,534 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-14T22:25:34,534 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-14T22:25:34,534 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-14T22:25:34,534 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-14T22:25:34,535 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-14T22:25:34,535 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-14T22:25:34,535 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-14T22:25:35,666 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-14T22:25:35,670 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-14T22:25:35,674 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-14T22:25:35,681 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684083335679 with initial instances count: 1
+2023-05-14T22:25:35,684 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application ORDER-MICROSERVICE with eureka with status UP
+2023-05-14T22:25:35,685 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684083335685, current=UP, previous=STARTING]
+2023-05-14T22:25:35,687 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.43.151:order-microservice:9001: registering service...
+2023-05-14T22:25:35,688 [main] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-9001"]
+2023-05-14T22:25:35,901 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.43.151:order-microservice:9001 - registration status: 204
+2023-05-14T22:25:35,941 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2023-05-14T22:25:35,942 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9001
+2023-05-14T22:25:36,381 [main] INFO  c.C.O.OrderMServiceApplication                     - Started OrderMServiceApplication in 25.278 seconds (process running for 32.93)
+2023-05-14T22:25:41,742 [main] INFO  c.C.O.I.OrderImplementation                        - Guard Details Registered!
+2023-05-14T22:28:17,924 [http-nio-9001-exec-1] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-14T22:28:17,969 [http-nio-9001-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2023-05-14T22:28:17,973 [http-nio-9001-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 3 ms
+2023-05-14T22:28:18,439 [http-nio-9001-exec-1] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-14T22:28:18,440 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Login Guard checking
+2023-05-14T22:30:29,683 [http-nio-9001-exec-3] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-05-14T22:30:29,698 [http-nio-9001-exec-3] INFO  c.C.O.C.OrderController                            - Saving Orders received in campus
+2023-05-14T22:30:34,538 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:31:05,887 [http-nio-9001-exec-4] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-05-14T22:31:05,888 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Saving Orders received in campus
+2023-05-14T22:31:22,858 [http-nio-9001-exec-6] INFO  c.C.O.C.OrderController                            - Fetching logs by institute ID from order MS to recipient MS
+2023-05-14T22:31:29,816 [http-nio-9001-exec-5] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
+2023-05-14T22:31:29,817 [http-nio-9001-exec-5] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
+2023-05-14T22:34:06,199 [http-nio-9001-exec-8] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-14T22:34:06,202 [http-nio-9001-exec-8] INFO  c.C.O.C.OrderController                            - Login Guard checking
+2023-05-14T22:34:15,572 [http-nio-9001-exec-9] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-14T22:34:15,589 [http-nio-9001-exec-9] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-05-14T22:34:15,596 [http-nio-9001-exec-9] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-14T22:34:26,210 [http-nio-9001-exec-10] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
+2023-05-14T22:34:54,216 [http-nio-9001-exec-1] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-05-14T22:35:01,694 [http-nio-9001-exec-2] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-05-14T22:35:06,459 [http-nio-9001-exec-3] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-14T22:35:06,460 [http-nio-9001-exec-3] INFO  c.C.O.I.OrderImplementation                        - No pending orders
+2023-05-14T22:35:06,461 [http-nio-9001-exec-3] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-14T22:35:19,366 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-14T22:35:19,366 [http-nio-9001-exec-4] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-05-14T22:35:19,371 [http-nio-9001-exec-4] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-14T22:35:27,009 [http-nio-9001-exec-6] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
+2023-05-14T22:35:34,540 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-14T22:36:05,894 [http-nio-9001-exec-5] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-05-14T22:36:08,849 [http-nio-9001-exec-7] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-14T22:36:08,850 [http-nio-9001-exec-7] INFO  c.C.O.I.OrderImplementation                        - No pending orders
+2023-05-14T22:36:08,850 [http-nio-9001-exec-7] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-14T22:36:19,713 [http-nio-9001-exec-8] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
+2023-05-14T22:36:19,715 [http-nio-9001-exec-8] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
+2023-05-14T22:37:04,811 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application ORDER-MICROSERVICE with eureka with status DOWN
+2023-05-14T22:37:04,811 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684084024811, current=DOWN, previous=UP]
+2023-05-14T22:37:04,812 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.43.151:order-microservice:9001: registering service...
+2023-05-14T22:37:04,818 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.43.151:order-microservice:9001 - registration status: 204
+2023-05-14T22:37:04,925 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-14T22:37:04,953 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-14T22:37:04,959 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-14T22:37:04,960 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-14T22:37:07,962 [DiscoveryClient-1] WARN  c.n.d.TimedSupervisorTask                          - task supervisor shutting down, can't accept the task
+2023-05-14T22:37:07,966 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-14T22:37:08,088 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.43.151:order-microservice:9001 - deregister  status: 200
+2023-05-14T22:37:08,104 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient

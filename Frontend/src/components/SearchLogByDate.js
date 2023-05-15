@@ -18,7 +18,7 @@ import Paper from '@mui/material/Paper';
 import axios from 'axios';
 import Switch from '@mui/material/Switch';
 import { RadioButtonChecked, RadioButtonUnchecked } from '@mui/icons-material';
-import { Grid} from "@mui/material";
+import { Grid, Typography} from "@mui/material";
 import GuardDashboard from './GuardDashboard';
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -117,22 +117,28 @@ function SearchLogByDate (){
         <GuardDashboard/>
         <Grid sx={{marginTop:'20px',marginLeft:'20px'}}>
             {isToggled ? (  
+              <>
+              <Typography sx={{marginBottom:'15px'}}>Search By Date</Typography>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 {/* <Alert severity="info">If searching by date, kindly use this format : YYYY-MM-DD </Alert> */}
-                <DatePicker label="Logs for Date" 
+                <DatePicker label="Search By Date" 
                 value={dateSelected}
                 onChange={(date) => {setDateSelected(date)}
                 }
                 />
                 
               </LocalizationProvider> 
+              </>
               ) : (
+                <>
+                <Typography sx={{marginBottom:'15px'}}>Search By Institute Id</Typography>
               <TextField
                 label="Search"
                 variant="outlined"
                 value={search}
                 onChange={handleSearch}
               />
+              </>
             )}
             
             <IconButton onClick={handleSearchLogs} >

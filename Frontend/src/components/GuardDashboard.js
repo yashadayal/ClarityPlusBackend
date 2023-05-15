@@ -11,9 +11,15 @@ function GuardDashboard() {
     <>
       <AppBar position="static" sx={{  height: "90px" , backgroundColor:"#0d47a1"}}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <div sx={{ display: "flex"}}>
-            {/* <Avatar sx={{marginTop:'20px', marginRight:'2opx',bgcolor: '#9e9e9e', flexShrink: 0 }} > G </Avatar> */}
-            <a href ='/guardlandingpage' style={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+          <div sx={{ display: "flex",alignItems: 'center'}}>
+            <Avatar sx={{ m: 1,bgcolor: 'white' ,marginTop:"30px" }}>
+            <a href ='/guardlandingpage' >
+            <Typography>
+              G
+            </Typography>
+            </a>
+          </Avatar>
+            {/* <a href ='/guardlandingpage' style={{  display: 'flex', }}>
               <Typography variant="h6" sx={{ 
                 fontWeight: 700,
                 color: 'white',
@@ -23,7 +29,7 @@ function GuardDashboard() {
                 marginLeft: "20px"}}>
               Guard
               </Typography>
-            </a> 
+            </a>  */}
             </div>
             <div sx={{ display: "flex", alignItems: "center" }}>
             <Button  sx={{ flexGrow:0,

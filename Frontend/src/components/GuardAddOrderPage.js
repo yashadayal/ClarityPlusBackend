@@ -1,5 +1,5 @@
 import React , { useState } from 'react';
-import {  Button,TextField,Select,FormControl} from '@mui/material';
+import {  Button,TextField,FormControl,Box,Grid,} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -8,10 +8,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem'; 
 import axios from 'axios';
-
+import { Alert, Collapse } from "@mui/material";
 import GuardDashboard from "./GuardDashboard";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -36,9 +34,39 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 function GuardAddOrderPage() {
+
+  const [nullValueError, setNullValueError] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [errormessage, setErrorMessage] = useState("");
+
   function createData(orderid, firstname, lastname, retailer) {
+
+    const AlphaNumericCheck = /^[A-Za-z0-9]+$/;
+    if (!AlphaNumericCheck.test(orderid)) {
+      setErrorMessage("Enter valid OrderId");
+      setNullValueError(true);
+      return;
+    }
+    const AlphaCheck = /^[A-Za-z]+$/;
+    if (!AlphaCheck.test(firstname)) {
+      setErrorMessage("Enter valid First Name");
+      setNullValueError(true);
+      return;
+    }
+    const AlphaCheckln = /^[A-Za-z]*$/;
+    if (!AlphaCheckln.test(lastname)) {
+      setErrorMessage("Enter valid Last Name");
+      setNullValueError(true);
+      return;
+    }
+    if (!AlphaCheck.test(retailer)) {
+      setErrorMessage("Enter valid Retailer");
+      setNullValueError(true);
+      return;
+    }
+
     return {
-      OrderID: orderid,
+      OrderID: orderid.toUpperCase(),
       FirstName: firstname,
       LastName: lastname,
       DateOfDelivery: new Date().toISOString().slice(0, 10),
@@ -61,9 +89,10 @@ function GuardAddOrderPage() {
     const dataToSend = inputField.map((field) =>
       createData(field.orderid, field.firstname, field.lastname, field.retailer)
     );
+
     console.log(dataToSend);
     const response = axios.post(
-      `http://localhost:9001/order/saveorderdata`,
+      `http://localhost:9003/order/saveorderdata`,
       dataToSend
     ).then((response)=>{
       alert("Data submitted successfully !");
@@ -104,6 +133,16 @@ function GuardAddOrderPage() {
                 <StyledTableRow key={index.name}>
                   <StyledTableCell>
                     <TextField
+                      onBlur={(e) => {
+                        const oi = /^[A-Za-z0-9]+$/;
+                        setNullValueError(false);
+                        if (!oi.test(e.target.value)) {
+                          setErrorMessage(" Order Id is invalid");
+                          setNullValueError(true);
+                        }
+  
+                        handleFormChange(index, e);
+                      }}
                       variant="outlined"
                       required
                       fullWidth
@@ -115,6 +154,17 @@ function GuardAddOrderPage() {
                   </StyledTableCell>
                   <StyledTableCell>
                     <TextField
+                      onBlur={(e) => {
+                        const fn = /^[A-Za-z]+$/;
+  
+                        // if value is not blank, then test the regex
+                        setNullValueError(false);
+                        if (!fn.test(e.target.value)) {
+                          setErrorMessage("First Name is invalid");
+                          setNullValueError(true);
+                        }
+                        handleFormChange(index, e);
+                      }}
                       variant="outlined"
                       required
                       fullWidth
@@ -126,6 +176,15 @@ function GuardAddOrderPage() {
                   </StyledTableCell>
                   <StyledTableCell>
                     <TextField
+                      onBlur={(e) => {
+                        const ln = /^[A-Za-z]*$/;
+                        setNullValueError(false);
+                        if (!ln.test(e.target.value)) {
+                          setErrorMessage("Last Name is invalid");
+                          setNullValueError(true);
+                        }
+                        handleFormChange(index, e);
+                      }}
                       variant="outlined"
                       fullWidth
                       label="Last Name"
@@ -136,6 +195,15 @@ function GuardAddOrderPage() {
                   </StyledTableCell>
                   <StyledTableCell>
                     <TextField
+                      onBlur={(e) => {
+                        const re = /^[A-Za-z]+$/;
+                        setNullValueError(false);
+                        if (!re.test(e.target.value)) {
+                          setErrorMessage("Retailer field contains only alphabets");
+                          setNullValueError(true);
+                        }
+                        handleFormChange(index, e);
+                      }}
                       variant="outlined"
                       required
                       fullWidth
@@ -148,6 +216,19 @@ function GuardAddOrderPage() {
                 </StyledTableRow>
               ))}
             </TableBody>
+            <Grid item xs={12} sm={6.1}>
+                  {nullValueError && (
+                <Box sx={{ width: "100%" }}>
+                  <Collapse in={open}>
+                    <Alert
+                      severity="error"
+                    >
+                      {errormessage}
+                    </Alert>
+                  </Collapse>
+                </Box>
+              )}
+                </Grid>
             <Button
               sx={{ backgroundColor: "#e3f2fd", mt: 1, color: "#0d47a1" }}
               type="submit"
@@ -160,6 +241,19 @@ function GuardAddOrderPage() {
             </Button>
             
           </Table>
+          {/* <Grid item xs={12} sm={6.1}>
+                  {nullValueError && (
+                <Box sx={{ width: "100%" }}>
+                  <Collapse in={open}>
+                    <Alert
+                      severity="error"
+                    >
+                      {errormessage}
+                    </Alert>
+                  </Collapse>
+                </Box>
+              )}
+                </Grid> */}
           <Button
               onClick={handleSubmit}
               fullWidth

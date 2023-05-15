@@ -101,7 +101,7 @@ function GuardSearchPage () {
             console.log(verified);
           }
           else if(response.data === "OTP not verified!"){
-            <Alert>Enter correct OTP!</Alert>
+            alert("Enter correct OTP!");
           }
       })
     };

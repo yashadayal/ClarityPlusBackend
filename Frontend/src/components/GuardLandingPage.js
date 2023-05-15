@@ -1,7 +1,7 @@
 import { Paper,Grid  } from "@mui/material";
 import React from "react";
 import GuardDashboard from './GuardDashboard';
-import imgPath from "./Images/iiit-bangalore.jpg"
+import imgPath from "./Images/college.jpeg"
 const GuardLandingPage =() =>
 {
     return(

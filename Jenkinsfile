@@ -19,6 +19,10 @@ pipeline {
                 }
             }
         }
+	stage('Clean Workspace') {
+            steps {
+                cleanWs()
+        }
 	stage('Build and Push Frontend Image') {
             steps {
                 dir('Frontend') {

@@ -2,6 +2,11 @@ pipeline {
     agent any
     
     stages {
+        stage('Clean Workspace Cache') {
+            steps {
+                cleanWs()
+	    }
+        }
         stage('Git Cloning') {
             steps {
                 git 'https://github.com/yashadayal/ClarityPlusPackage.git'
@@ -18,11 +23,6 @@ pipeline {
                     }
                 }
             }
-        }
-	stage('Clean Workspace') {
-            steps {
-                cleanWs()
-	    }
         }
 	stage('Build and Push Frontend Image') {
             steps {

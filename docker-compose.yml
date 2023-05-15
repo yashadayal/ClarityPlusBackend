@@ -67,7 +67,8 @@ services:
       - "9001:9001"
     depends_on:
       - apigateway
-      - mysql_recipient
+      - recipient
+      - mysql_order
     networks:
       - claritypluspackage
     logging:

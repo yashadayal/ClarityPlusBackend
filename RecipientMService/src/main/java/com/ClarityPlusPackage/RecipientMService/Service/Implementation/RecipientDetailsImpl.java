@@ -26,9 +26,6 @@ public class RecipientDetailsImpl implements RecipientDetailsService {
     @Autowired
     LoginRepo loginRepo;
 
-    public RecipientDetailsImpl(RecipientDetailsRepo recipientDetailsRepo) {
-    }
-
 
     public String getEmailIDByInstituteID(String instituteID) {
         System.out.println("Inside Implementation");

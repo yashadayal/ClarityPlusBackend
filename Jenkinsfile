@@ -2,9 +2,26 @@ pipeline {
     agent any
     
     stages {
+        stage('Clean Workspace Cache') {
+            steps {
+                cleanWs()
+	    }
+        }
         stage('Git Cloning') {
             steps {
                 git 'https://github.com/yashadayal/ClarityPlusPackage.git'
+            }
+        }
+	stage('Unit Testing') {
+            steps {
+                script {
+                    def microservices = ['OrderMService', 'RecipientMService', 'apigateway', 'eurekaServer']
+                    for (folder in microservices) {
+                        dir(folder) {
+                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean test"
+                        }
+                    }
+                }
             }
         }
         stage('Build Microservices Code') {
@@ -13,7 +30,7 @@ pipeline {
                     def microservices = ['OrderMService', 'RecipientMService', 'apigateway', 'eurekaServer']
                     for (folder in microservices) {
                         dir(folder) {
-                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean package -DskipTests"
+                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean package"
                         }
                     }
                 }
@@ -50,15 +67,10 @@ pipeline {
                 }
             }
         }
-
         stage('Ansible Deploy') {
 		steps {
-			ansiblePlaybook becomeUser: 'null',
-			colorized: true,
-			installation: 'Ansible',
-			inventory: 'inventory',
-			playbook: 'ansible-playbook.yml',
-			sudoUser: 'null'
+			 sh "ansible-playbook -i inventory ansible-playbook.yml"
+
 		}
 	}
     }

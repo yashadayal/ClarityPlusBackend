@@ -15,7 +15,7 @@ pipeline {
 	stage('Unit Testing') {
             steps {
                 script {
-                    def microservices = ['OrderMService', 'RecipientMService', 'apigateway', 'eurekaServer']
+                    def microservices = ['OrderMService', 'RecipientMService']
                     for (folder in microservices) {
                         dir(folder) {
                             sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean test"

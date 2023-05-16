@@ -3532,3 +3532,225 @@ Caused by: java.net.UnknownHostException: mysql_order
 2023-05-16T19:04:00,768 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-05-16T19:04:00,769 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
 2023-05-16T19:04:00,774 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 5 ms
+2023-05-16T19:07:53,375 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application ORDER-MICROSERVICE with eureka with status DOWN
+2023-05-16T19:07:53,377 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684244273377, current=DOWN, previous=UP]
+2023-05-16T19:07:53,377 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:07:53,387 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:07:53,459 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:07:53,466 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-16T19:07:53,490 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-16T19:07:53,491 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-16T19:07:56,492 [DiscoveryClient-0] WARN  c.n.d.TimedSupervisorTask                          - task supervisor shutting down, can't accept the task
+2023-05-16T19:07:56,494 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-16T19:07:56,511 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - deregister  status: 200
+2023-05-16T19:07:56,518 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient
+2023-05-16T19:20:27,583 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest]: OrderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T19:20:27,766 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.OrderMService.OrderMServiceApplication for test class com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest
+2023-05-16T19:20:29,394 [main] INFO  c.C.O.C.OrderTest                                  - Starting OrderTest using Java 17.0.6 with PID 1128 (started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T19:20:29,400 [main] INFO  c.C.O.C.OrderTest                                  - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:20:31,249 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext           - Initializing Spring TestDispatcherServlet ''
+2023-05-16T19:20:31,250 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Initializing Servlet ''
+2023-05-16T19:20:31,254 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Completed initialization in 1 ms
+2023-05-16T19:20:31,290 [main] INFO  c.C.O.C.OrderTest                                  - Started OrderTest in 2.632 seconds (process running for 5.978)
+2023-05-16T19:20:36,471 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
+2023-05-16T19:20:36,507 [main] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-05-16T19:20:36,524 [main] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
+2023-05-16T19:20:36,534 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-16T19:20:36,535 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-16T19:20:36,542 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by institute ID from order MS to recipient MS
+2023-05-16T19:20:36,673 [main] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
+2023-05-16T19:20:36,684 [main] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-05-16T19:20:36,687 [main] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-05-16T19:20:36,693 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-16T19:20:36,695 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-16T19:20:36,701 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.OrderMService.OrderMServiceApplicationTests]: OrderMServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T19:20:36,711 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.OrderMService.OrderMServiceApplication for test class com.ClarityPlusPackage.OrderMService.OrderMServiceApplicationTests
+2023-05-16T19:20:36,803 [main] INFO  c.C.O.OrderMServiceApplicationTests                - Starting OrderMServiceApplicationTests using Java 17.0.6 with PID 1128 (started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T19:20:36,804 [main] INFO  c.C.O.OrderMServiceApplicationTests                - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:20:37,951 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T19:20:38,015 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2023-05-16T19:20:38,342 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=a4b4a91e-581b-313a-b039-7c621f3a3346
+2023-05-16T19:20:38,773 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T19:20:38,906 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T19:20:39,206 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-16T19:20:40,295 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@227c0cf7
+2023-05-16T19:20:40,297 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-16T19:20:40,352 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-16T19:20:40,356 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-16T19:20:41,662 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T19:20:41,669 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:20:42,827 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T19:20:43,573 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-16T19:20:43,839 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-16T19:20:43,848 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver                  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-16T19:20:43,938 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-16T19:20:44,003 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-16T19:20:44,016 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-16T19:20:44,056 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-16T19:20:44,056 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-16T19:20:44,057 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-16T19:20:44,057 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-16T19:20:44,057 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-16T19:20:44,057 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-16T19:20:44,058 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-16T19:20:44,578 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-16T19:20:44,581 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-16T19:20:44,584 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-16T19:20:44,590 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684245044589 with initial instances count: 3
+2023-05-16T19:20:44,600 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application ORDER-MICROSERVICE with eureka with status UP
+2023-05-16T19:20:44,601 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684245044601, current=UP, previous=STARTING]
+2023-05-16T19:20:44,603 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:20:44,667 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:20:44,675 [main] INFO  c.C.O.OrderMServiceApplicationTests                - Started OrderMServiceApplicationTests in 7.956 seconds (process running for 19.364)
+2023-05-16T19:20:50,223 [main] INFO  c.C.O.I.OrderImplementation                        - Guard Details Registered!
+2023-05-16T19:20:50,258 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application ORDER-MICROSERVICE with eureka with status DOWN
+2023-05-16T19:20:50,259 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684245050259, current=DOWN, previous=UP]
+2023-05-16T19:20:50,261 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:20:50,273 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:20:50,277 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:20:50,280 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-16T19:20:50,293 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-16T19:20:50,294 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-16T19:20:53,299 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-16T19:20:53,320 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - deregister  status: 200
+2023-05-16T19:20:53,347 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient
+2023-05-16T19:23:04,928 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest]: OrderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T19:23:05,111 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.OrderMService.OrderMServiceApplication for test class com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest
+2023-05-16T19:23:06,457 [main] INFO  c.C.O.C.OrderTest                                  - Starting OrderTest using Java 17.0.6 with PID 1430 (started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T19:23:06,462 [main] INFO  c.C.O.C.OrderTest                                  - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:23:08,631 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext           - Initializing Spring TestDispatcherServlet ''
+2023-05-16T19:23:08,632 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Initializing Servlet ''
+2023-05-16T19:23:08,640 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Completed initialization in 3 ms
+2023-05-16T19:23:08,689 [main] INFO  c.C.O.C.OrderTest                                  - Started OrderTest in 2.891 seconds (process running for 5.972)
+2023-05-16T19:23:13,817 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
+2023-05-16T19:23:13,855 [main] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-05-16T19:23:13,881 [main] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
+2023-05-16T19:23:13,895 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-16T19:23:13,896 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-16T19:23:13,906 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by institute ID from order MS to recipient MS
+2023-05-16T19:23:14,054 [main] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
+2023-05-16T19:23:14,066 [main] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-05-16T19:23:14,083 [main] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-05-16T19:23:14,090 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-16T19:23:14,092 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-16T19:23:14,098 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.OrderMService.OrderMServiceApplicationTests]: OrderMServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T19:23:14,115 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.OrderMService.OrderMServiceApplication for test class com.ClarityPlusPackage.OrderMService.OrderMServiceApplicationTests
+2023-05-16T19:23:14,270 [main] INFO  c.C.O.OrderMServiceApplicationTests                - Starting OrderMServiceApplicationTests using Java 17.0.6 with PID 1430 (started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T19:23:14,271 [main] INFO  c.C.O.OrderMServiceApplicationTests                - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:23:15,139 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T19:23:15,209 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2023-05-16T19:23:15,498 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=a4b4a91e-581b-313a-b039-7c621f3a3346
+2023-05-16T19:23:15,910 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T19:23:15,991 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T19:23:16,231 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-16T19:23:16,905 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cb73a92
+2023-05-16T19:23:16,908 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-16T19:23:16,941 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-16T19:23:16,944 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-16T19:23:17,912 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T19:23:17,930 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:23:18,957 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T19:23:19,751 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-16T19:23:19,841 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-16T19:23:19,854 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver                  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-16T19:23:19,962 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-16T19:23:20,015 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-16T19:23:20,022 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-16T19:23:20,093 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-16T19:23:20,093 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-16T19:23:20,093 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-16T19:23:20,094 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-16T19:23:20,094 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-16T19:23:20,094 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-16T19:23:20,095 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-16T19:23:20,541 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-16T19:23:20,546 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-16T19:23:20,550 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-16T19:23:20,561 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684245200559 with initial instances count: 3
+2023-05-16T19:23:20,573 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application ORDER-MICROSERVICE with eureka with status UP
+2023-05-16T19:23:20,574 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684245200574, current=UP, previous=STARTING]
+2023-05-16T19:23:20,577 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:23:20,653 [main] INFO  c.C.O.OrderMServiceApplicationTests                - Started OrderMServiceApplicationTests in 6.524 seconds (process running for 17.935)
+2023-05-16T19:23:20,662 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:23:25,843 [main] INFO  c.C.O.I.OrderImplementation                        - Guard Details Registered!
+2023-05-16T19:23:25,896 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application ORDER-MICROSERVICE with eureka with status DOWN
+2023-05-16T19:23:25,896 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684245205896, current=DOWN, previous=UP]
+2023-05-16T19:23:25,897 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:23:25,914 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:23:25,926 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:23:25,929 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-16T19:23:25,943 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-16T19:23:25,944 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-16T19:23:28,949 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-16T19:23:28,969 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - deregister  status: 200
+2023-05-16T19:23:29,000 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient
+2023-05-16T19:25:40,216 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest]: OrderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T19:25:40,437 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.OrderMService.OrderMServiceApplication for test class com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest
+2023-05-16T19:25:41,889 [main] INFO  c.C.O.C.OrderTest                                  - Starting OrderTest using Java 17.0.6 with PID 1748 (started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T19:25:41,898 [main] INFO  c.C.O.C.OrderTest                                  - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:25:44,543 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext           - Initializing Spring TestDispatcherServlet ''
+2023-05-16T19:25:44,544 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Initializing Servlet ''
+2023-05-16T19:25:44,551 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Completed initialization in 3 ms
+2023-05-16T19:25:44,611 [main] INFO  c.C.O.C.OrderTest                                  - Started OrderTest in 3.444 seconds (process running for 6.424)
+2023-05-16T19:25:49,770 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
+2023-05-16T19:25:49,812 [main] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-05-16T19:25:49,836 [main] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
+2023-05-16T19:25:49,853 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-16T19:25:49,854 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-16T19:25:49,869 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by institute ID from order MS to recipient MS
+2023-05-16T19:25:50,073 [main] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
+2023-05-16T19:25:50,097 [main] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-05-16T19:25:50,103 [main] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-05-16T19:25:50,117 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-16T19:25:50,120 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-16T19:25:50,130 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.OrderMService.OrderMServiceApplicationTests]: OrderMServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T19:25:50,152 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.OrderMService.OrderMServiceApplication for test class com.ClarityPlusPackage.OrderMService.OrderMServiceApplicationTests
+2023-05-16T19:25:50,292 [main] INFO  c.C.O.OrderMServiceApplicationTests                - Starting OrderMServiceApplicationTests using Java 17.0.6 with PID 1748 (started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T19:25:50,295 [main] INFO  c.C.O.OrderMServiceApplicationTests                - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:25:51,284 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T19:25:51,364 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2023-05-16T19:25:51,783 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=a4b4a91e-581b-313a-b039-7c621f3a3346
+2023-05-16T19:25:52,219 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T19:25:52,313 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T19:25:52,569 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-16T19:25:53,189 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cb73a92
+2023-05-16T19:25:53,192 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-16T19:25:53,234 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-16T19:25:53,238 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-16T19:25:54,444 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T19:25:54,458 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:25:55,711 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T19:25:56,617 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-16T19:25:56,715 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-16T19:25:56,735 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver                  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-16T19:25:56,909 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-16T19:25:57,001 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-16T19:25:57,008 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-16T19:25:57,083 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-16T19:25:57,083 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-16T19:25:57,084 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-16T19:25:57,084 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-16T19:25:57,084 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-16T19:25:57,085 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-16T19:25:57,086 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-16T19:25:57,667 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-16T19:25:57,673 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-16T19:25:57,694 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-16T19:25:57,719 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684245357717 with initial instances count: 3
+2023-05-16T19:25:57,738 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application ORDER-MICROSERVICE with eureka with status UP
+2023-05-16T19:25:57,739 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684245357739, current=UP, previous=STARTING]
+2023-05-16T19:25:57,749 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:25:57,810 [main] INFO  c.C.O.OrderMServiceApplicationTests                - Started OrderMServiceApplicationTests in 7.647 seconds (process running for 19.623)
+2023-05-16T19:25:57,868 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:26:03,038 [main] INFO  c.C.O.I.OrderImplementation                        - Guard Details Registered!
+2023-05-16T19:26:03,090 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application ORDER-MICROSERVICE with eureka with status DOWN
+2023-05-16T19:26:03,091 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684245363091, current=DOWN, previous=UP]
+2023-05-16T19:26:03,095 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:26:03,112 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:26:03,117 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:26:03,120 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-16T19:26:03,164 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-16T19:26:03,166 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-16T19:26:06,173 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-16T19:26:06,202 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - deregister  status: 200
+2023-05-16T19:26:06,267 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient

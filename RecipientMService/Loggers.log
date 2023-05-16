@@ -65,3 +65,14 @@
 2023-05-16T19:03:37,331 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Application version is -1: false
 2023-05-16T19:03:37,332 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
 2023-05-16T19:03:37,366 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-16T19:07:47,083 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application RECIPIENT-MICROSERVICE with eureka with status DOWN
+2023-05-16T19:07:47,086 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684244267086, current=DOWN, previous=UP]
+2023-05-16T19:07:47,087 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.1.4:recipient-microservice:9002: registering service...
+2023-05-16T19:07:47,179 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.1.4:recipient-microservice:9002 - registration status: 204
+2023-05-16T19:07:47,622 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:07:47,662 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-05-16T19:07:47,756 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-05-16T19:07:47,758 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-05-16T19:07:50,760 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-05-16T19:07:50,775 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.1.4:recipient-microservice:9002 - deregister  status: 200
+2023-05-16T19:07:50,791 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient

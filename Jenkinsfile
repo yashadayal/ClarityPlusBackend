@@ -12,13 +12,18 @@ pipeline {
                 git 'https://github.com/yashadayal/ClarityPlusPackage.git'
             }
         }
+	stage('Unit Testing') {
+            steps {
+                 sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean test"
+            }
+        }
         stage('Build Microservices Code') {
             steps {
                 script {
                     def microservices = ['OrderMService', 'RecipientMService', 'apigateway', 'eurekaServer']
                     for (folder in microservices) {
                         dir(folder) {
-                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean package -DskipTests"
+                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean install"
                         }
                     }
                 }

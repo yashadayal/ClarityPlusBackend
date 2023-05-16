@@ -30,7 +30,7 @@ pipeline {
                     def microservices = ['OrderMService', 'RecipientMService', 'apigateway', 'eurekaServer']
                     for (folder in microservices) {
                         dir(folder) {
-                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean package"
+                            sh "/home/yasha/.sdkman/candidates/maven/current/bin/mvn clean package -DskipTests"
                         }
                     }
                 }

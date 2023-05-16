@@ -193,7 +193,6 @@ function SearchLogByDate (){
             <TableRow>
               <StyledTableCell align="center">Order Id</StyledTableCell>
               <StyledTableCell align="center">Name</StyledTableCell>
-              {/* <StyledTableCell align="center">Last Name</StyledTableCell> */}
               <StyledTableCell align="center">Retailer</StyledTableCell>
               <StyledTableCell align="center">Received</StyledTableCell>
             </TableRow>
@@ -209,7 +208,7 @@ function SearchLogByDate (){
             <TableCell align="center">{splittedData[0]}</TableCell>
             <TableCell align="center">{splittedData[1]}</TableCell>
             <TableCell align="center">{splittedData[2]}</TableCell>
-            {/* <TableCell align="center">{splittedData[3]}</TableCell> */}
+            <TableCell align="center">{splittedData[3]}</TableCell>
             <TableCell align="center">
             {splittedData[3] === "true" ? (
               <RadioButtonChecked color="primary">Delivered</RadioButtonChecked>

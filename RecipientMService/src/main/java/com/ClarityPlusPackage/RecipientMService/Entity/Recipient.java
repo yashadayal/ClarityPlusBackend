@@ -41,6 +41,10 @@ public class Recipient {
     @Column(nullable = true,name="OTP")
     int OTP;
 
+    public Recipient(String OrderID) {
+        this.OrderID = OrderID;
+    }
+
     @PrePersist
     public void setDefaultValues() {
         if (Received == null) {

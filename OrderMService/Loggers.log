@@ -1,0 +1,19 @@
+2023-05-16T18:25:44,102 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest]: OrderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T18:25:44,392 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.OrderMService.OrderMServiceApplication for test class com.ClarityPlusPackage.OrderMService.ControllerTest.OrderTest
+2023-05-16T18:25:45,469 [main] INFO  c.C.O.C.OrderTest                                  - Starting OrderTest using Java 17.0.6 with PID 23345 (started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T18:25:45,473 [main] INFO  c.C.O.C.OrderTest                                  - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T18:25:47,351 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext           - Initializing Spring TestDispatcherServlet ''
+2023-05-16T18:25:47,352 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Initializing Servlet ''
+2023-05-16T18:25:47,357 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Completed initialization in 2 ms
+2023-05-16T18:25:47,394 [main] INFO  c.C.O.C.OrderTest                                  - Started OrderTest in 2.429 seconds (process running for 5.272)
+2023-05-16T18:25:52,505 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by delivered date from order MS
+2023-05-16T18:25:52,567 [main] INFO  c.C.O.C.OrderController                            - Verifying OTP from order MS to recipient MS
+2023-05-16T18:25:52,610 [main] INFO  c.C.O.C.OrderController                            - Fetching emailID from order MS to recipient for sending otp
+2023-05-16T18:25:52,645 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that recipient has filled form for.
+2023-05-16T18:25:52,648 [main] INFO  c.C.O.C.OrderController                            - Getting OrderIDs that are in campus for given instituteID.
+2023-05-16T18:25:52,683 [main] INFO  c.C.O.C.OrderController                            - Fetching logs by institute ID from order MS to recipient MS
+2023-05-16T18:28:23,751 [main] INFO  c.C.O.I.OrderImplementation                        - Fetched logs by delivered date
+2023-05-16T18:28:23,787 [main] INFO  c.C.O.I.OrderImplementation                        - Checking orderIDs in recipient are there in order or not
+2023-05-16T18:28:23,799 [main] INFO  c.C.O.I.OrderImplementation                        - Saved orders received in campus
+2023-05-16T18:28:23,814 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login
+2023-05-16T18:28:23,816 [main] INFO  c.C.O.I.OrderImplementation                        - Valid Login

@@ -1,0 +1,13 @@
+2023-05-16T18:22:40,542 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ClarityPlusPackage.RecipientMService.ControllerTest.RecipientDetailsTest]: RecipientDetailsTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16T18:22:40,822 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ClarityPlusPackage.RecipientMService.RecipientMServiceApplication for test class com.ClarityPlusPackage.RecipientMService.ControllerTest.RecipientDetailsTest
+2023-05-16T18:22:42,517 [main] INFO  c.C.R.C.RecipientDetailsTest                       - Starting RecipientDetailsTest using Java 17.0.6 with PID 23029 (started by yasha in /home/yasha/Desktop/SPE/RecipientMService)
+2023-05-16T18:22:42,523 [main] INFO  c.C.R.C.RecipientDetailsTest                       - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T18:22:45,375 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext           - Initializing Spring TestDispatcherServlet ''
+2023-05-16T18:22:45,375 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Initializing Servlet ''
+2023-05-16T18:22:45,386 [main] INFO  o.s.t.w.s.TestDispatcherServlet                    - Completed initialization in 3 ms
+2023-05-16T18:22:45,416 [main] INFO  c.C.R.C.RecipientDetailsTest                       - Started RecipientDetailsTest in 3.766 seconds (process running for 6.795)
+2023-05-16T18:22:50,573 [main] INFO  c.C.R.C.RecipientDetailsController                 - Checking OTP correct or not
+2023-05-16T18:22:50,619 [main] INFO  c.C.R.C.RecipientDetailsController                 - Searching by Institute Id
+2023-05-16T18:22:50,730 [main] INFO  c.C.R.C.RecipientDetailsController                 - Getting all logs by Institute Id
+2023-05-16T18:22:50,744 [main] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
+2023-05-16T18:33:50,713 [main] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID

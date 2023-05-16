@@ -23,6 +23,7 @@ public class OrderImplementation implements OrderService {
     private static final Logger logger = LogManager.getLogger(OrderImplementation.class);
 
     @Autowired
+    public
     OrderRepo orderRepo;
 
     @Autowired

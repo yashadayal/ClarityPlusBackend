@@ -3482,3 +3482,53 @@ Caused by: java.net.UnknownHostException: mysql_order
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184) ~[spring-test-6.0.7.jar:6.0.7]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118) ~[spring-test-6.0.7.jar:6.0.7]
 	... 67 more
+2023-05-16T19:03:47,702 [main] INFO  c.C.O.OrderMServiceApplication                     - Starting OrderMServiceApplication using Java 17.0.6 with PID 29450 (/home/yasha/Desktop/SPE/OrderMService/target/classes started by yasha in /home/yasha/Desktop/SPE/OrderMService)
+2023-05-16T19:03:47,711 [main] INFO  c.C.O.OrderMServiceApplication                     - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:03:49,156 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T19:03:49,287 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 125 ms. Found 2 JPA repository interfaces.
+2023-05-16T19:03:49,546 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=055c27df-bf98-3701-b1e6-7f85f2421d48
+2023-05-16T19:03:49,870 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2023-05-16T19:03:49,877 [main] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-9001"]
+2023-05-16T19:03:49,878 [main] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2023-05-16T19:03:49,878 [main] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-16T19:03:49,975 [main] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2023-05-16T19:03:49,975 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2197 ms
+2023-05-16T19:03:50,302 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T19:03:50,338 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T19:03:50,560 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-16T19:03:51,931 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4067634b
+2023-05-16T19:03:51,934 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-16T19:03:51,955 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-16T19:03:51,957 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-16T19:03:52,866 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T19:03:52,880 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:03:53,468 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T19:03:54,165 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-16T19:03:54,204 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-16T19:03:54,210 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver                  - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-16T19:03:54,346 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-16T19:03:54,388 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-16T19:03:54,396 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-16T19:03:54,445 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-16T19:03:54,446 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-16T19:03:54,446 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-16T19:03:54,446 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-16T19:03:54,446 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-16T19:03:54,446 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-16T19:03:54,446 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-16T19:03:54,771 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-16T19:03:54,774 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-16T19:03:54,776 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-16T19:03:54,781 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684244034781 with initial instances count: 1
+2023-05-16T19:03:54,784 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application ORDER-MICROSERVICE with eureka with status UP
+2023-05-16T19:03:54,784 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684244034784, current=UP, previous=STARTING]
+2023-05-16T19:03:54,785 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001: registering service...
+2023-05-16T19:03:54,786 [main] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-9001"]
+2023-05-16T19:03:54,804 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2023-05-16T19:03:54,804 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9001
+2023-05-16T19:03:54,824 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_ORDER-MICROSERVICE/192.168.1.4:order-microservice:9001 - registration status: 204
+2023-05-16T19:03:54,828 [main] INFO  c.C.O.OrderMServiceApplication                     - Started OrderMServiceApplication in 7.749 seconds (process running for 9.306)
+2023-05-16T19:03:59,921 [main] INFO  c.C.O.I.OrderImplementation                        - Guard Details Registered!
+2023-05-16T19:04:00,768 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-16T19:04:00,769 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet'
+2023-05-16T19:04:00,774 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 5 ms

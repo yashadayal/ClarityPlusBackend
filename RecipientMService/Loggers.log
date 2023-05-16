@@ -11,3 +11,57 @@
 2023-05-16T18:22:50,730 [main] INFO  c.C.R.C.RecipientDetailsController                 - Getting all logs by Institute Id
 2023-05-16T18:22:50,744 [main] INFO  c.C.R.C.RecipientDetailsController                 - Login Recipient checking
 2023-05-16T18:33:50,713 [main] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Displaying unreceived orders of given instituteID
+2023-05-16T19:03:00,272 [main] INFO  c.C.R.RecipientMServiceApplication                 - Starting RecipientMServiceApplication using Java 17.0.6 with PID 29235 (/home/yasha/Desktop/SPE/RecipientMService/target/classes started by yasha in /home/yasha/Desktop/SPE/RecipientMService)
+2023-05-16T19:03:00,285 [main] INFO  c.C.R.RecipientMServiceApplication                 - No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:03:01,460 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T19:03:01,646 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 177 ms. Found 2 JPA repository interfaces.
+2023-05-16T19:03:01,912 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=7a8b6d3d-538a-3c64-9af5-792eb540e898
+2023-05-16T19:03:02,404 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2023-05-16T19:03:02,412 [main] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-9002"]
+2023-05-16T19:03:02,414 [main] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat]
+2023-05-16T19:03:02,414 [main] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-16T19:03:02,553 [main] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext
+2023-05-16T19:03:02,553 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2176 ms
+2023-05-16T19:03:02,818 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T19:03:02,895 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T19:03:03,316 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-05-16T19:03:04,128 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b29cdea
+2023-05-16T19:03:04,131 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-05-16T19:03:04,150 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-05-16T19:03:04,152 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-16T19:03:05,228 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T19:03:05,242 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:03:05,932 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T19:03:06,506 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-16T19:03:06,582 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-16T19:03:06,697 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-05-16T19:03:06,843 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-05-16T19:03:06,849 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-05-16T19:03:06,874 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-16T19:03:06,874 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-16T19:03:06,874 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-16T19:03:06,874 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-16T19:03:06,875 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-16T19:03:06,875 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-05-16T19:03:06,875 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-16T19:03:07,327 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-05-16T19:03:07,329 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-05-16T19:03:07,331 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-16T19:03:07,335 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1684243987335 with initial instances count: 0
+2023-05-16T19:03:07,338 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application RECIPIENT-MICROSERVICE with eureka with status UP
+2023-05-16T19:03:07,339 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1684243987339, current=UP, previous=STARTING]
+2023-05-16T19:03:07,340 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.1.4:recipient-microservice:9002: registering service...
+2023-05-16T19:03:07,341 [main] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-9002"]
+2023-05-16T19:03:07,375 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_RECIPIENT-MICROSERVICE/192.168.1.4:recipient-microservice:9002 - registration status: 204
+2023-05-16T19:03:07,495 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2023-05-16T19:03:07,496 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 9002
+2023-05-16T19:03:07,507 [main] INFO  c.C.R.RecipientMServiceApplication                 - Started RecipientMServiceApplication in 7.95 seconds (process running for 10.701)
+2023-05-16T19:03:13,047 [main] INFO  c.C.R.S.I.RecipientDetailsImpl                     - Recipient Details Registered!
+2023-05-16T19:03:37,330 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-05-16T19:03:37,330 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-05-16T19:03:37,331 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-05-16T19:03:37,331 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-05-16T19:03:37,331 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-05-16T19:03:37,331 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Application version is -1: false
+2023-05-16T19:03:37,332 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-05-16T19:03:37,366 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient                              - The response status is 200

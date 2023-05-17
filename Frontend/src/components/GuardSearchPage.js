@@ -82,6 +82,9 @@ function GuardSearchPage () {
 
     const handleCloseSuccess = () =>{
       setOpenSuccess(false);
+      setOtp('');
+      setRecipientDetails('');
+      setSearchID('');
     };
     
     const handleSearchID = (e) => {
@@ -105,6 +108,7 @@ function GuardSearchPage () {
             alert("Enter correct OTP!");
           }
       })
+      setOtp('');
     };
 
     const handleSearch = async(e) => {

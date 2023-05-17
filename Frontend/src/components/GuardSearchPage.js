@@ -83,7 +83,6 @@ function GuardSearchPage () {
     const handleCloseSuccess = () =>{
       setOpenSuccess(false);
       setOtp('');
-      setRecipientDetails('');
       setSearchID('');
     };
     

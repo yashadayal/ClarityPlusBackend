@@ -5,6 +5,9 @@ services:
     image: yasha145/claritypluspackage:1.0
     ports:
       - "8761:8761"
+    depends_on:
+      - mysql_recipient
+      - mysql_order
     networks:
       - claritypluspackage
 
@@ -14,6 +17,8 @@ services:
       - "9003:9003"
     depends_on:
       - eureka
+      - mysql_order
+      - mysql_recipient
     networks:
       - claritypluspackage
   
@@ -40,6 +45,7 @@ services:
     depends_on:
       - apigateway
       - mysql_recipient
+      - mysql_order
     networks:
       - claritypluspackage
     logging:
@@ -68,6 +74,7 @@ services:
     depends_on:
       - apigateway
       - mysql_order
+      - mysql_recipient
       - recipient
     networks:
       - claritypluspackage

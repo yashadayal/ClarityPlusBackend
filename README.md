@@ -34,7 +34,7 @@ The GitHub repository contains the following folders and files:
 6. **Jenkinsfile**: Contains the Jenkins pipeline script for CI/CD.
 7. **WebHook Testing**: Used for GitHub webhook testing purposes.
 8. **Ansible-Playbook**: Contains the tasks to be performed on the target machine.
-9. **docker-compose file**: Defines services, networks, and volumes.
+9. **docker-compose file**: Defines services, networks, and volumes for Docker containerization.
 10. **inventory**: Contains the IP address, location of the SSH private key, etc., of the target machine (in our case, an AWS EC2 instance).
 
 ## Installation

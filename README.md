@@ -1,4 +1,4 @@
-# Clarity Plus Package Management System
+# Clarity Plus Package
 
 ## Problem Statement
 

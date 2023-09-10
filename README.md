@@ -61,5 +61,3 @@ The project will start running with all necessary configurations.
 ## Contact
 
 For any queries or support, please contact [yasha.dayal145@gmail.com](mailto:yasha.dayal145@gmail.com).
-
-Feel free to customize this README to include additional details or sections specific to your project's needs.
